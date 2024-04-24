@@ -1,0 +1,53 @@
+{% extends 'listings/base.html' %}
+{% load static %}
+{% block content %}
+<div class ="annonce-titre"><h1>Product Grid</h1></div>
+<div class="index-l4">
+    <div>
+        <h1>Our Products</h1>
+    </div>
+    <div class="grille">
+            {% for list in list_vetement %}
+                    <div>
+                        <a href="{% url 'details_vetement' list.id %}">
+                            <img src="{% static 'listings/image/p' %}{{ list.id }}.png" alt="">
+                            <div>
+                            <h3>{{ list.name }}</h3>
+                            <h4>${{ list.prix }}</h4>
+                            </div>
+                        </a>
+                    </div>
+            {% endfor %}
+    </div>
+</div>
+<button id="viewButton3">View All Products</button>
+<div class="annonce-foot">
+    <div class="annonce-foot1">
+        <h1>Reach at ...</h1>
+        <div>
+            <img src="{% static 'listings/image/location_on_FILL0_wght400_GRAD0_opsz24.png' %}" alt="Location icon">
+            Location
+        </div>
+        <div>
+            <img src="{% static 'listings/image/call_FILL0_wght400_GRAD0_opsz24.png' %}" alt="Call icon">
+            Call at +01 1234567890
+        </div>
+        <div>
+            <img src="{% static 'listings/image/mail_FILL0_wght400_GRAD0_opsz24.png' %}" alt="Mail icon">
+            demo@gmail.com
+        </div>
+    </div>
+    <div class="annonce-foot2">
+        <h1>Famms</h1>
+        <P>Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with</p>
+        <div>
+            <img src="{% static 'listings/image/f.jpeg' %}">
+            <img src="{% static 'listings/image/in.jpeg' %}">
+            <img src="{% static 'listings/image/insta.jpeg' %}">
+            <img src="{% static 'listings/image/pinterest.jpeg' %}">
+            <img src="{% static 'listings/image/x.jpeg' %}">
+        </div>   
+    </div>
+</div>
+
+{% endblock %}

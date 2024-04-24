@@ -1,0 +1,25 @@
+{% load static %}
+<html>
+    <head>
+        <title>Merchex</title>
+        <link rel="stylesheet" href="{% static 'listings/styles.css' %}" />
+    </head>
+    <body>
+        
+        <nav>
+            <a href="{% url 'hello' %}"><img class = "logo" src="{% static 'listings/image/logo.png' %}" alt="Logo du site" ></a>
+            <a href="{% url 'hello' %}">HOME</a>
+            <a href="{% url 'about-us' %}">PAGES</a>
+            <a href="{% url 'annonce' %}">PRODUCTS</a>
+            <a href="{% url 'blog' %}">BLOG</a>
+            <a href="{% url 'contact' %}">CONTACT</a>
+            <a href="{% url 'panier' %}"><img class = "logo-panier" src="{% static 'listings/image/logo-panier.png' %}" alt="Logo du site" ></a>
+            <a href="{% url 'panier' %}"><img class = "logo-loop" src="{% static 'listings/image/logo-loop.png' %}" alt="Logo du site" ></a>
+        </nav>
+
+        {% block content %}{% endblock %}
+    <footer>
+        <p>@2021 All Right Reserved By Free Html Templates <br>Distributed By ThemeWagon</p>
+    </footer>
+    </body>
+</html>

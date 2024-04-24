@@ -1,0 +1,51 @@
+{% extends 'listings/base.html' %}
+{% load static %}
+{% block content %}
+<div class ="annonce-titre"><h1>About</h1></div>
+<div class = "index-l2">
+    <h1>Why Shop With Us</h1>
+    <div class = "blog">
+        <div><img class="logo" src="{% static 'listings/image/livraison.png' %}" alt="">
+            <h3>Fast Delivery</h3>
+            <p>variations of passages </p>
+        </div>
+        <div><img class="logo" src="{% static 'listings/image/free.png' %}" alt="">
+            <h3>Free Shiping</h3>
+            <p>variations of passages </p>
+        </div>
+        <div><img class="logo" src="{% static 'listings/image/certified.png' %}" alt="">
+            <h3>Best Quality</h3>
+            <p>variations of passages</p>
+        </div>
+    </div>
+</div>
+
+<div class="annonce-foot">
+    <div class="annonce-foot1">
+        <h1>Reach at ...</h1>
+        <div>
+            <img src="{% static 'listings/image/location_on_FILL0_wght400_GRAD0_opsz24.png' %}" alt="Location icon">
+            Location
+        </div>
+        <div>
+            <img src="{% static 'listings/image/call_FILL0_wght400_GRAD0_opsz24.png' %}" alt="Call icon">
+            Call at +01 1234567890
+        </div>
+        <div>
+            <img src="{% static 'listings/image/mail_FILL0_wght400_GRAD0_opsz24.png' %}" alt="Mail icon">
+            demo@gmail.com
+        </div>
+    </div>
+    <div class="annonce-foot2">
+        <h1>Famms</h1>
+        <P>Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with</p>
+        <div>
+            <img src="{% static 'listings/image/f.jpeg' %}">
+            <img src="{% static 'listings/image/in.jpeg' %}">
+            <img src="{% static 'listings/image/insta.jpeg' %}">
+            <img src="{% static 'listings/image/pinterest.jpeg' %}">
+            <img src="{% static 'listings/image/x.jpeg' %}">
+        </div>   
+    </div>
+</div>
+    {% endblock %}

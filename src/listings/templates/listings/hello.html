@@ -1,0 +1,111 @@
+{% extends 'listings/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="index">
+    <div>
+        <div class="index-l1">
+            <h1>Sale 20% Off On Everything</h1>
+            <p>Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi</p>
+            <button type = "Submit" id = "index-submit">Shop Now</button>
+        </div>
+        <div class = "index-l2">
+            <h1>Why Shop With Us</h1>
+            <div class = "blog">
+                <div><img class="logo" src="{% static 'listings/image/livraison.png' %}" alt="">
+                    <h3>Fast Delivery</h3>
+                    <p>variations of passages </p>
+                </div>
+                <div><img class="logo" src="{% static 'listings/image/free.png' %}" alt="">
+                    <h3>Free Shiping</h3>
+                    <p>variations of passages </p>
+                </div>
+                <div><img class="logo" src="{% static 'listings/image/certified.png' %}" alt="">
+                    <h3>Best Quality</h3>
+                    <p>variations of passages</p>
+                </div>
+            </div>
+        </div>
+        <div class="index-l3">
+            <div></div>
+            <div>
+                <h1>#New Arrivals</h1>
+            <p>Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi</p>
+            <button type = "Submit" id = "index-submit2">Shop Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="index-l4">
+        <div>
+            <h1>Our Porducts</h1>
+        </div>
+        <div class="grille">
+                {% for list in list_vetement %}
+                        <div>
+                            <a href="{% url 'details_vetement' list.id %}">
+                                <img src="{% static 'listings/image/p' %}{{ list.id }}.png" alt="">
+                                <div>
+                                <h3>{{ list.name }}</h3>
+                                <h4>${{ list.prix }}</h4>
+                                </div>
+                            </a>
+                        </div>
+                {% endfor %}
+        </div>
+    </div>
+    <div class="index-l5">
+        <button id="viewButton">View All Products</button>
+        <div class="index-l5-l1">
+            <h1>Subscribe To Get Discount Offers</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            <form action="" method="post" novalidate>
+                <input type="email" id="email" name="email" placeholder="  Enter Your Email" required>
+                <input type="submit" value="Envoyer">
+            </form>
+        </div>
+        <div class="index-l5-l2">
+            <h1>Customer's Testimonial</h1>
+            <img class="logo" src="{% static 'listings/image/client.jpg' %}" alt="">
+            <h4>Anna Trevor</h4>
+            <h5>Customer</h5>
+            <p>Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.</p>
+        </div>
+        <div class="foot">
+            <div>
+                <img class="logo" src="{% static 'listings/image/logo.png' %}" alt="">
+                <p><span>ADDRESS: </span>28 White tower, Street Name New York City, USA <br></p>
+                <p><span>TELEPHONE: </span>+91 987 654 3210<br></p>
+                <p><span>EMAIL: </span>yourmain@gmail.com</p>
+            </div>
+            <div>
+                <h2>MENU</h2>
+                <a>Home</a>
+                <a>About</a>
+                <a>Service</a>
+                <a>Termonial</a>
+                <a>Blog</a>
+                <a>Contact</a>
+            </div>
+            <div>
+                <h2>ACCOUNT</h2>
+                <a>Account</a>
+                <a>Checkout</a>
+                <a>Login</a>
+                <a>Register</a>
+                <a>Shopping</a>
+                <a>Widget</a>
+            </div>
+            <div>
+                <h2>NEWSTETTLER</h2>
+                <p>Subscribe by our newsletter and get update protidin.</p>
+                <form action="" method="post" novalidate>
+                    <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+                    <input type="submit" value="Envoyer">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
