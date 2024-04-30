@@ -5,11 +5,6 @@
     margin: 0;
 }
 
-
-
-
-
-
 ul li{
     text-decoration: none;
     list-style: none;
@@ -260,7 +255,7 @@ background-size: cover;
 
 .index-l5-l1{
     background-color: rgb(180, 180, 180);
-    width: 96%;
+    width:50%;
     display: grid;
     grid-template-rows: 3fr;
     margin-top: 2%;
@@ -286,17 +281,16 @@ background-size: cover;
     align-items: center;
 }
 
-.index-l5-l1 form input[type="email"] {
-    margin-bottom: 10px;
+.email_l5{
+    margin-bottom: 5px;
     border-radius: 25px;
     border: none;
-    width: 450%;
     height:50px;
-    margin-bottom: 25%;
+    margin-bottom:5%;
 
 }
 
-.index-l5-l1 form input[type="submit"]{
+.submit_l5{
     background-color:#f7444e;
     color: white;
     padding:1%;
@@ -307,7 +301,7 @@ background-size: cover;
     border-radius: 10px;
     cursor: pointer;
     margin-top:5%;
-    width: 120%;
+    width: 20%;
     height: 35px;
 }
 
@@ -566,6 +560,7 @@ footer p{
 }
 
 /*------------------------------------------Blog---------------------------------------------*/
+
 .blog{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -595,15 +590,16 @@ footer p{
 }
 
 /*----------------------------------------------------------Blog : FIN---------------------------------------------------------------*/
-
-form {
+.contact form {
     width:50%; 
     margin: 0 auto; 
     padding: 5%;
     
 }
 
-form input[type="texte"], form input[type="email"], form input[type="submit"] {
+.contact form input[type="texte"],
+.contact form input[type="email"],
+.contact form input[type="submit"]{
     width: 100%; 
     padding:20px; 
     margin-bottom: 10px; 
@@ -613,7 +609,7 @@ form input[type="texte"], form input[type="email"], form input[type="submit"] {
 
 }
 
-form input[type="submit"] {
+.contact form input[type="submit"]{
     background-color:#545454; 
     color: white; 
     border: none; 
@@ -623,7 +619,7 @@ form input[type="submit"] {
     
 }
 
-form input[type="submit"]:hover {
+.contact input[type="submit"]:hover {
     background-color:#f7444e; 
 }
 
