@@ -623,3 +623,42 @@ footer p{
     background-color:#f7444e; 
 }
 
+/* Media Query pour les écrans de 480px et moins (mobile) */
+@media screen and (max-width: 480px) {
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+    }
+  
+    .logo {
+      max-width: 80%; /* Réduire la taille du logo */
+    }
+  
+    .box {
+      grid-template-columns: 1fr; /* Modifier la disposition pour une seule colonne */
+      gap: 10px; /* Réduire l'espace entre les éléments */
+      margin-left: 5%; /* Ajuster les marges */
+      margin-right: 5%;
+    }
+  
+    /* Autres styles spécifiques aux appareils mobiles */
+  }
+  
+  /* Media Query pour les écrans de 834px et moins (tablette) */
+  @media screen and (max-width: 834px) {
+    nav {
+      grid-template-columns: repeat(2, 1fr); /* Modifier la disposition pour deux colonnes */
+    }
+  
+    .grille {
+      grid-template-columns: 1fr 1fr; /* Modifier la disposition pour deux colonnes */
+      gap: 10px; /* Réduire l'espace entre les éléments */
+      margin-left: 5%; /* Ajuster les marges */
+      margin-right: 5%;
+    }
+  
+    /* Autres styles spécifiques aux tablettes */
+  }
+  

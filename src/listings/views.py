@@ -22,7 +22,14 @@ def details_produit(request, id):
    vetement = Vetements.objects.get(id=id)
    return render(request,
           'listings/details_produit.html',
-         {'vetement': vetement}) 
+         {'vetement': vetement})
+
+
+def tri(request, categorie):
+    list_vetement = Vetements.objects.filter(categorie=categorie)
+    return render(request, 'listings/tri.html', {'categorie': categorie, 'list_vetement': list_vetement})
+
+
 
 def contact(request):
     if request.method == 'POST':
@@ -36,7 +43,7 @@ def contact(request):
             recipient_list=['admin@merchex.xyz'],
         )
         return redirect('contact')
-
+ 
     else:
         form = ContactUsForm()
     return render(request, 'listings/contact.html', {'form': form})

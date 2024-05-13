@@ -2,18 +2,17 @@
 {% load static %}
 {% block content %}
 <div class ="annonce-titre"><h1>Product Grid</h1></div>
+<div>
+    <h5>Catégorie : {{ categorie }}</h5>
+</div>
 
-<h4>Categorie :</h4>
-<ul>
-    <li><a href="{% url 'tri' categorie='Homme' %}">Homme</a></li>
-    <li><a href="{% url 'tri' categorie='Femme' %}">Femme</a></li>
-</ul>
 <div class="index-l4">
     <div>
         <h1>Our Products</h1>
     </div>
     <div class="grille">
             {% for list in list_vetement %}
+                {%if list.categorie == categorie%}
                     <div>
                         <a href="{% url 'details_vetement' list.id %}">
                             <img src="{% static 'listings/image/p' %}{{ list.id }}.png" alt="">
@@ -23,10 +22,13 @@
                             </div>
                         </a>
                     </div>
+                {%endif%}
             {% endfor %}
-    </div>
+    </div> 
 </div>
-<button id="viewButton3">View All Products</button>
+
+<button id = "retourListe"><a href="{% url 'annonce' %}">Retour à tous les groupes</a></button>
+
 <div class="annonce-foot">
     <div class="annonce-foot1">
         <h1>Reach at ...</h1>

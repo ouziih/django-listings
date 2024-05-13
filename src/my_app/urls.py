@@ -24,6 +24,7 @@ urlpatterns = [
     path('about-us/', views.about, name='about-us'),
     path('annonce/', views.annonce, name='annonce'),
     path('annonce/<int:id>/', views.details_produit, name='details_vetement'),
+    path('annonce/tri/<str:categorie>/', views.tri, name='tri'),
     path('contact/', views.contact, name='contact'),
     path('blog/', views.blog, name='blog'),
     path('panier/', views.panier, name='panier'),
